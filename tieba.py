@@ -106,18 +106,18 @@ if __name__=='__main__':
      mail_usr='zallensmith'
      mail_postfix='sina.com'
      mailto_list=['729889375@qq.com']
-     print u'刷帖程序正在运行.....'
+     print 'Tieba.py is running.....'
      while(True):
           nowDay=time.strftime("%d",time.localtime())
           nowHour=time.strftime("%H",time.localtime())
           nowMinute=time.strftime("%M",time.localtime())
           nowSeconds=time.strftime("%S",time.localtime())
-
+           
           nowDay=int(nowDay)
           nowHour=int(nowHour)
           nowMinute=int(nowMinute)
           nowSeconds=int(nowSeconds)
-
+          
           if nowDay%24==nowHour and nowMinute==15 and nowSeconds==15:
               #提取要发送的内容
               data=theData(nowDay)
