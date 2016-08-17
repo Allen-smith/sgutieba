@@ -118,14 +118,40 @@ if __name__=='__main__':
           nowMinute=int(nowMinute)
           nowSeconds=int(nowSeconds)
           
-          if nowDay%24==nowHour and nowMinute==15 and nowSeconds==15:
-              #提取要发送的内容
-              data=theData(nowDay)
-              # 发送帖子
-              resultcode=sguTieBa(data)
-              # 判断发送帖子的返回码，发送邮件通知
-              sendEmailToMe(resultcode,data)
-              time.sleep(2)
+          #早
+          if nowHour==9 and nowMinute==29 and nowSeconds==1:
+                data=theData(nowDay)
+                # 发送帖子
+                resultcode=sguTieBa(data)
+                # 判断发送帖子的返回码，发送邮件通知
+                sendEmailToMe(resultcode,data)
+                time.sleep(2)
+
+          #中
+          if nowHour==14 and nowMinute==30 and nowSeconds==1:
+                data=theData(nowDay)
+                # 发送帖子
+                resultcode=sguTieBa(data)
+                # 判断发送帖子的返回码，发送邮件通知
+                sendEmailToMe(resultcode,data)
+                time.sleep(2)
+
+          #晚
+          if nowHour==19 and nowMinute==31 and nowSeconds==1:
+                data=theData(nowDay)
+                # 发送帖子
+                resultcode=sguTieBa(data)
+                # 判断发送帖子的返回码，发送邮件通知
+                sendEmailToMe(resultcode,data)
+                time.sleep(2)
+          #凌晨
+          if nowHour==0 and nowMinute==32 and nowSeconds==1:
+                data=theData(nowDay)
+                # 发送帖子
+                resultcode=sguTieBa(data)
+                # 判断发送帖子的返回码，发送邮件通知
+                sendEmailToMe(resultcode,data)
+                time.sleep(2)
 
           if nowDay==1:
               exit(1)
